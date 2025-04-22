@@ -1,0 +1,25 @@
+byte RedLED = 3; 
+byte BluLED = 5;
+byte GrnLED = 6;  
+int  RedFade;
+int  BluFade;
+int  GrnFade;
+
+void setup() {
+  // Set RGB pins as output
+  pinMode(RedLED, OUTPUT);
+  pinMode(BluLED, OUTPUT);
+  pinMode(GrnLED, OUTPUT);
+}
+
+void loop() {
+  int RedFade = random(20);
+  int BluFade = random(20);
+  int GrnFade = random(20);
+  
+  // Example: cycle through primary colors with 1 second delay
+  analogWrite(RedLED, RedFade);
+  analogWrite(BluLED, BluFade);
+  analogWrite(GrnLED, GrnFade);
+  delay(1000);
+  }
